@@ -1,0 +1,91 @@
+<html>
+
+<head>
+<SCRIPT>
+var _PAGE="";
+    _PAGE=""; /* Specify an actual page if you don't want to use the popup code. */
+
+var _CONTENT=""; /* this holds the data to write if no external html file is used */
+
+function openImageWindow(imageSrc,imageTitle)
+{
+/*
+ * if you use the name "_PAGE" for the page
+ * you will have no problems at all
+ * however if you change the name to something else
+ * remember to change the reference to it in the following line of code
+ * to reference your own filename..
+ *
+ * No _PAGE specified uses the javascript code embedded on this page.
+ *
+ */
+
+_CONTENT="";
+_CONTENT+="<HTML>\n";
+_CONTENT+="<head>\n";
+_CONTENT+="<"+"SCRIPT>\n";
+_CONTENT+="function specialInit()\n";
+_CONTENT+="{\n";
+_CONTENT+="if (document.all || document.layers)\n";
+_CONTENT+="window.resizeTo(document.images[0].width + 50,document.images[0].height + 180);\n";
+_CONTENT+="}\n";
+_CONTENT+="</"+"SCRIPT>\n";
+_CONTENT+="</head>\n";
+_CONTENT+="<BODY onLoad='specialInit();'>\n";
+_CONTENT+="<"+"SCRIPT>\n";
+_CONTENT+="document.write('<center>');\n";
+_CONTENT+="document.write('<b><font color=\\'#ffffff\\'>');\n";
+_CONTENT+="document.write('<span style=\\'BACKGROUND-COLOR:black\\'>&nbsp;');\n";
+_CONTENT+="document.write('"+imageTitle+"' +' &nbsp;</span></font></b><HR>');\n";
+_CONTENT+="document.write('<IMG SRC=\\'"+imageSrc+"\\'>');\n";
+_CONTENT+="document.write('<HR><P><P><P><FORM><INPUT TYPE=button VALUE=Fechar onClick=window.close()></FORM>');\n";
+_CONTENT+="document.write('</center>')\n";
+_CONTENT+="</"+"SCRIPT>\n";
+_CONTENT+="</BODY>\n";
+_CONTENT+="</HTML>\n";
+
+  var _parms = 'directories=no,location=no,menubar=no,scrollbars=no,status=no,toolbar=no,resizable=yes';
+ var _windowName = "PicViewer";
+  if(_PAGE)
+  {
+    fileName = 'popup.htm?' + escape(imageSrc) + '&amp;' + escape(imageTitle);
+    myWindowHandle = window.open(fileName,_windowName,_parms);
+  }
+  else
+  {
+    myWindowHandle=window.open("",_windowName,_parms);
+    myWindowHandle.document.open();
+    myWindowHandle.document.write(_CONTENT);
+    myWindowHandle.document.close();
+  }
+  myWindowHandle.focus();
+}
+</script>
+<meta name="Description" content="Fala-nos de uma pequena aldeia chamada Lugar da Uz situada entre Trás os Montes e o Minho">
+<meta name="Keywords" content="Lugar da Uz,  Cabeceiras de Basto, Braga, Minho ">
+<meta http-equiv="Content-Language" content="pt">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>banner</title>
+<base target="rbottom">
+</head>
+
+<body bgcolor="#000000" text="#FFFFFF">
+
+<p><span style="position: absolute; left: 242; top: 4; z-index: 3"><a href="http://www.uminho.pt" target="_blank"><img border="0" src="images/selo_um.jpg" width="61" height="47" alt="Universidade do Minho"></a></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="position: absolute; left: 160; top: 4; z-index: 3"><img border="0" src="images/baner2.gif" width="58" height="46" alt="Cabeceiras de Basto"></span>&nbsp;&nbsp;&nbsp;<span style="z-index: 1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="position: absolute; left: 395; top: 10; z-index: 3"><a href="mailto:lugardauz@iol.pt"><img border="0" src="images/e-mail.gif" width="50" height="40" alt="Mande-nos sugestões para o e-mail lugardauz@iol.pt"></a></span>&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="position: absolute; left: 585; top: 5"><img border="0" src="images/afogadinho.gif" width="82" height="50"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<span style="position: absolute; left: 450; top: 14"><img border="0" src="images/serrano.bmp" width="120" height="34" alt="A tasca da terra"></span>&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+<p><br>
+<span style="position: absolute; left: 310; top: 6; z-index: 2"><a href="mapa.html" target="_blank"><img border="0" src="images/baner1.gif" alt="Onde fica no mapa" width="75" height="45"></a></span><span style="position: absolute; left: 31; top: 5; z-index: 1"><IMG onclick="openImageWindow('images/baner9.gif','Vista no Espaço')" height="44" width="98" src="images/baner9.gif" border=0 alt="Aldeia vista do espaço" align="baseline"></a></span>
+</p>
+<p>&nbsp;</p>
+
+</body>
+
+</html>

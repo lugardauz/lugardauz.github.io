@@ -1,0 +1,52 @@
+<html>
+
+<head>
+<title>Lugar da Uz</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="Description" content="Fala-nos de uma pequena aldeia chamada Lugar da Uz situada entre Trás os Montes e o Minho">
+<meta name="Keywords" content="Lugar da Uz,  Cabeceiras de Basto, Braga, Minho ">
+</head>
+<script language="JavaScript">
+<!--
+//set message:
+msg = "Bem Vindo ao site do Lugar da Uz!";
+
+timeID = 10;
+stcnt = 16;
+wmsg = new Array(33);
+        wmsg[0]=msg;
+        blnk = "                                                               ";
+        for (i=1; i<32; i++)
+        {
+                b = blnk.substring(0,i);
+                wmsg[i]="";
+                for (j=0; j<msg.length; j++) wmsg[i]=wmsg[i]+msg.charAt(j)+b;
+        }
+
+function wiper()
+{
+        if (stcnt > -1) str = wmsg[stcnt]; else str = wmsg[0];
+        if (stcnt-- < -40) stcnt=31;
+        status = str;
+        clearTimeout(timeID);
+        timeID = setTimeout("wiper()",100);
+}
+
+wiper()
+// -->
+</script>
+
+<frameset rows="27%,*" border="0">
+    <frame name="top" target="rbottom" src="banner2.htm" noresize scrolling="no" frameborder="0">
+<frameset  framespacing="0" cols="13%,*" frameborder="0">
+  <frame name="left" scrolling="no" noresize target="rbottom" src="menu3.htm">
+<frame name="rbottom" src="home.htm" target="_self" scrolling="auto" border="0">
+  
+    
+  </frameset>
+  <noframes>
+ 
+  </noframes>
+</frameset>
+
+</html>
